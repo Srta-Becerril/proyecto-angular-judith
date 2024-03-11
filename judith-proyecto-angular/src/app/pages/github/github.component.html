@@ -1,15 +1,32 @@
-<div>
-  <h2>Información de GitHub</h2>
-  <label for="nombreUsuario">Nombre de usuario:</label>
-  <input type="text" id="nombreUsuario" [(ngModel)]="nombre_usuario" placeholder="Ingresa un nombre de usuario" />
-  <button (click)="obtenerInformacionUsuario()">Obtener información</button>
+<!-- HTML DEL COMPONENTE -->
+<!-- Contenedor general -->
+<div class="contenedor">
 
-  <div *ngIf="userData">
-    <h3>Detalles del usuario:</h3>
-    <p><strong>Login:</strong> {{ userData.login }}</p>
-    <p><strong>Nombre:</strong> {{ userData.name }}</p>
-    <!-- Agrega más detalles según la información que desees mostrar -->
+  <!-- CABECERA -->
+  <div class="cabecera">
+
+    <!-- Texto de la cabecera -->
+    <h1>APLICACIÓN - GITHUB</h1>
   </div>
 
-  <button *ngIf="userData" (click)="copiarPortapapeles()">Copiar al portapapeles</button>
+  <!-- BÚSQUEDA -->
+  <div class="busqueda">
+    <!-- Entrada de texto para la búsqueda -->
+    <input type="text" [(ngModel)]="nombre_usuario" placeholder="Ingrese un usuario" />
+    <!-- Botón de búsqueda -->
+    <button (click)="obtenerInformacionUsuario()" id="botonBusqueda">Buscar</button>
+  </div>
+
+  <!-- DATOS DEL USUARIO -->
+  <div *ngIf="userData">
+
+    <!-- Texto del usuario -->
+    <h3>Detalles del usuario:</h3>
+
+    <!-- Descripción del usuario -->
+    <p><strong>Login:</strong> {{ userData.login }}</p>
+    <p><strong>Nombre:</strong> {{ userData.name }}</p>
+  </div>
+  <button *ngIf="userData" (click)="copiarPortapapeles()" id="botonPortapapeles">Copiar al portapapeles</button>
 </div>
+
