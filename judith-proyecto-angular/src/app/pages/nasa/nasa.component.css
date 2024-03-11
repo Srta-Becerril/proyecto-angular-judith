@@ -1,0 +1,53 @@
+/* ESTILOS GENERALES */
+/* Estilo del contenedor principal */
+.contenedor {
+    background-color: #f8f8f8;
+    color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+/* ESTILOS DE LA CABECERA */
+/* Estilo del contenedor de cabecera */
+.cabecera {
+    background-color: #e57373;
+    padding: 10px;
+    margin: 0px;
+}
+
+/* Estilo del texto de la cabecera */
+h1 {
+    color: white;
+}
+
+/* ESTILOS DE BÚSQUEDA */
+/* Estilo de la barra de buşqueda */
+.busqueda {
+    margin-top: 20px;
+}
+
+/* Estilo de la entrada de texto */
+input {
+    padding: 10px;
+    border: 1px solid #e57373;
+    border-radius: 5px;
+}
+
+/* ESTILOS DE RESULTADO DEL APOD */
+/* Estilo del texto del clima */
+h2 {
+    color: #e57373;
+}
+
+/* Estilo de la descripción del clima */
+p {
+    margin: 10px 0;
+}
+
+/* Estilo de la imagen del clima */
+img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+

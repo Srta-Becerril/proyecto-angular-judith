@@ -2,14 +2,13 @@
 import { Component } from '@angular/core'; // Importar componente
 import { FormsModule } from '@angular/forms'; // Importar FormsModule
 
-
 // COMPONENTE
 @Component({
   selector: 'app-clima', // Selector del componente
   standalone: true, // Componente standalone
   imports: [FormsModule], // Importar FormsModule
-  templateUrl: './clima.component.html', // URL del archivo HTML
-  styleUrl: './clima.component.css' // URL del archivo CSS
+  templateUrl: './clima.component.html', // Archivo HTML
+  styleUrl: './clima.component.css' // Archivo CSS
 
 })
 
