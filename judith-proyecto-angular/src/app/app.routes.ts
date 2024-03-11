@@ -1,23 +1,27 @@
-import { Routes } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
-import { ClimaComponent } from './pages/clima/clima.component';
-import { githubComponent } from './pages/github/github.component';
-import { NasaComponent } from './pages/nasa/nasa.component';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+// MÓDULOS IMPORTADOS
+import { Routes } from '@angular/router'; // Importar RouterModule
+import { HomeComponent } from './pages/home/home.component'; // Importar componente home
+import { ClimaComponent } from './pages/clima/clima.component'; // Importar componente clima
+import { githubComponent } from './pages/github/github.component'; // Importar componente GitHub
+import { NasaComponent } from './pages/nasa/nasa.component'; // Importar componente NASA
+import { NgModule } from '@angular/core'; // Importar NgModule
+import { FormsModule } from '@angular/forms'; // Importar FormsModule
 
+// RUTAS
 export const routes: Routes = [
-    { path: '', component: HomeComponent, title: 'Inicio' },
-    { path: 'clima', component: ClimaComponent, title: 'Clima' },
-    { path: 'github', component: githubComponent, title: 'GitHub' },
-    { path: 'apod', component: NasaComponent, title: 'APOD' },
-    { path: '**', redirectTo: '', pathMatch: 'full' },
+    { path: '', component: HomeComponent, title: 'Inicio' }, // Ruta inicial
+    { path: 'clima', component: ClimaComponent, title: 'Clima' }, // Ruta clima
+    { path: 'github', component: githubComponent, title: 'GitHub' }, // Ruta GitHub
+    { path: 'apod', component: NasaComponent, title: 'APOD' }, // Ruta NASA
+    { path: '**', redirectTo: '', pathMatch: 'full' } // Ruta por defecto
 ];
 
+// MODULO
 import { CommonModule } from '@angular/common';
 
+// COMPONENTE NgModule
 @NgModule({
-  declarations: [NasaComponent],
-  imports: [CommonModule, FormsModule],
+  declarations: [NasaComponent], // Componentes declarados
+  imports: [CommonModule, FormsModule], // Módulos importados
 })
-export class TuOtroModulo { }
+export class OtroModulo { } // Exportar componente
