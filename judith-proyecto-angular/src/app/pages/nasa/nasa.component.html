@@ -1,0 +1,10 @@
+<h1>IMAGEN ASTRONÓMICA DEL DÍA</h1>
+
+<input type="date" [(ngModel)]="selectedDate" (ngModelChange)="getAstronomyPicture()">
+<br>
+
+<div *ngIf="astronomyPicture">
+    <h2>{{ astronomyPicture.title }}</h2>
+    <img [src]="astronomyPicture.url" alt="{{ astronomyPicture.title }}" />
+    <p>{{ astronomyPicture.explanation }}</p>
+</div>
