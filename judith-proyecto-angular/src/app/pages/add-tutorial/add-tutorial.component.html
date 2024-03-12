@@ -1,38 +1,37 @@
-<div>
-    <div class="submit-form">
-      @if (!submitted) {
-        <div>
-          <div class="form-group">
-            <label for="title">Title</label>
-            <input
-              type="text"
-              class="form-control"
-              id="title"
-              required
-              [(ngModel)]="tutorial.title"
-              name="title"
-              />
-            </div>
-            <div class="form-group">
-              <label for="description">Description</label>
-              <input
-                class="form-control"
-                id="description"
-                required
-                [(ngModel)]="tutorial.description"
-                name="description"
-                />
-              </div>
-              <button (click)="saveTutorial()" class="btn btn-success">Submit</button>
-            </div>
-          }
-  
-          @if (submitted) {
-            <div>
-              <h4>Tutorial was submitted successfully!</h4>
-              <button class="btn btn-success" (click)="newTutorial()">Add</button>
-            </div>
-          }
-        </div>
+<!-- HTML DEL COMPONENTE -->
+<!-- Contenedor general -->
+<div class="contenedor">
+
+  <!-- CABECERA -->
+  <div class="cabecera">
+    <!-- Texto de la cabecera -->
+    <h1>GESTOR - NOTAS</h1>
+  </div>
+
+  <!-- FORMULARIO -->
+  <div class="formulario">
+    @if (!submitted) {
+    <div>
+      <!-- Formulario de registro -->
+      <div class="form-group">
+        <input type="text" class="form-control" id="title" required [(ngModel)]="tutorial.title" name="title" placeholder="Título de nota"/>
       </div>
-  
+
+      <!-- Formulario de descripción -->
+      <div class="form-group">
+        <input class="form-control" id="description" required [(ngModel)]="tutorial.description" name="description" placeholder="Descripción de nota"/>
+      </div>
+      <button (click)="saveTutorial()" class="btn btn-success">Submit</button>
+    </div>
+    }
+
+    <!-- Mensaje de confirmación -->
+    @if (submitted) {
+    <div>
+      <!-- Descripción de confirmación -->
+      <h4>Tutorial was submitted successfully!</h4>
+      <button class="btn btn-success" (click)="newTutorial()">Add</button>
+    </div>
+    }
+  </div>
+</div>

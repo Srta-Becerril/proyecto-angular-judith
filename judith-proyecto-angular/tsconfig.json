@@ -25,6 +25,7 @@
     ]
   },
   "angularCompilerOptions": {
+    "baseUrl": "./", // Cambio hecho a partir del repositorio cliente fuente.
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,

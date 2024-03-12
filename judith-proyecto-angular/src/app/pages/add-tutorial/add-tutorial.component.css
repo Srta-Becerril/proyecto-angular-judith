@@ -1,4 +1,93 @@
-.submit-form {
-    max-width: 400px;
-    margin: auto;
+/* ESTILOS GENERALES */
+/* Estilo del contenedor principal */
+.contenedor {
+    background-color: #f8f8f8;
+    color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+/* ESTILOS DE LA CABECERA */
+/* Estilo del contenedor de cabecera */
+.cabecera {
+    background-color: #e57373;
+    padding: 10px;
+    margin: 0;
+}
+
+/* Estilo del texto de la cabecera */
+h1 {
+    color: white;
+}
+
+/* ESTILOS DE FORMULARIO */
+/* Estilo para el formulario */
+.formulario {
+    margin-top: 20px;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Estilos para los campos de entrada del formulario */
+input {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #e57373;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+/* Estilo del placeholder del input */
+input::placeholder {
+    color: #e57373;
+}
+
+/* Estilo del cursor al pasar el mouse por encima */
+input:hover {
+    background-color: rgb(0, 0, 0);
+    color: #e57373;
+    transition: 0.3s;
+}
+
+/* Estilos para el botón de enviar del formulario */
+button {
+    background-color: #e57373;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid #e57373;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: 0.3s;
+}
+
+/* Estilo del cursor al pasar el mouse por encima */
+button:hover {
+    background-color: rgb(0, 0, 0);
+    color: #e57373;
+}
+
+/* ESTILOS DE RESULTADO DEL USUARIO */
+/* Estilo de los datos del usuario */
+h4 {
+    color: #e57373;
+}
+ /* Estilo del botón de enviar del formulario */
+.btn-success {
+    background-color: #e57373;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid #e57373;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* Estilo del cursor al pasar el mouse por encima */
+.btn-success:hover {
+    background-color: rgb(0, 0, 0);
+    color: #e57373;
 }
