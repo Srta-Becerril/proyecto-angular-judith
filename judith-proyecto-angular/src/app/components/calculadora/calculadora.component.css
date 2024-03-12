@@ -1,0 +1,57 @@
+/* ESTILOS GENERALES */
+/* Estilo del contenedor principal */
+.contenedor {
+    background-color: #f8f8f8;
+    color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+/* ESTILOS DE LA CABECERA */
+/* Estilo del contenedor de la cabecera */
+.cabecera {
+    background-color: #e57373;
+    padding: 10px;
+    margin: 0;
+}
+
+/* Estilo del texto de la cabecera */
+h1 {
+    color: white;
+}
+
+/* Estilos de la calculadora */
+.calculadora {
+    margin-top: 20px;
+}
+
+/* Estilo de la pantalla */
+.form-control {
+    background-color: #e57373;
+    color: white;
+    border: 1px solid #e57373;
+}
+
+/* Estilo de los botones */
+.botones {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    margin-top: 10px;
+}
+
+/* Estilo de los botones */
+button {
+    padding: 10px;
+    border: 1px solid #e57373;
+    background-color: #f8f8f8;
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Estilo del cursor al pasar el mouse por encima */
+button:hover {
+    background-color: #e57373;
+    color: white;
+}
