@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http'; // Importar HttpClient
 // COMPONENTE
 @Component({
   selector: 'app-gestion-archivos', // Selector del componente
-  templateUrl: './gestion-archivos.component.html', // // Archivo HTML
+  templateUrl: './gestion-archivos.component.html', // Archivo HTML
   styleUrls: ['./gestion-archivos.component.css'] // Archivo CSS
 })
 
