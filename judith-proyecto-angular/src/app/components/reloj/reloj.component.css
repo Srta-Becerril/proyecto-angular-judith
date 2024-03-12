@@ -1,0 +1,17 @@
+/* ESTILOS DEL RELOJ MUNDIAL */
+/* Estilo del contenedor del reloj mundial */
+.reloj-mundial {
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+  
+  /* Estilo de la hora actual */
+  h2 {
+    color: #e57373;
+    font-size: 24px;
+    margin: 0;
+  }
+  
