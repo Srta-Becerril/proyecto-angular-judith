@@ -2,7 +2,7 @@
 import { Component, OnInit } from '@angular/core'; // Importar componente
 import { GithubService } from '../../services/github.service'; // Importar servicio
 import { inject } from '@angular/core'; // Importar inject
-import { CommonModule } from '@angular/common'; // Importar CommonModule
+ // Importar CommonModule
 import { FormsModule } from '@angular/forms'; // Importar FormsModule
 
 // COMPONENTE
@@ -11,7 +11,7 @@ import { FormsModule } from '@angular/forms'; // Importar FormsModule
   standalone: true, // Componente standalone
   templateUrl: './github.component.html', // Template del componente
   styleUrls: ['./github.component.css'], // Estilos del componente
-  imports: [CommonModule, FormsModule] // Importar CommonModule y FormsModule
+  imports: [FormsModule] // Importar CommonModule y FormsModule
 })
 
 // CLASE

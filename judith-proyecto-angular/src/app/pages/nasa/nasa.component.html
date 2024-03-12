@@ -1,25 +1,25 @@
 <!-- HTML DEL COMPONENTE -->
 <!-- Contenedor general -->
 <div class="contenedor">
-    <!-- CABECERA -->
-    <div class="cabecera">
-        <!-- Texto de la cabecera -->
-        <h1>APLICACIÓN - NASA</h1>
+  <!-- CABECERA -->
+  <div class="cabecera">
+    <!-- Texto de la cabecera -->
+    <h1>APLICACIÓN - NASA</h1>
+  </div>
+
+  <!-- BÚSQUEDA -->
+  <div class="busqueda">
+    <input type="date" [(ngModel)]="selectedDate" (ngModelChange)="getAstronomyPicture()">
+  </div>
+
+  <!-- DATOS DEL APOB -->
+  @if (astronomyPicture) {
+    <div>
+      <!-- Texto del clima -->
+      <h2>{{ astronomyPicture.title }}</h2>
+      <!-- Descripción del clima -->
+      <img [src]="astronomyPicture.url" alt="{{ astronomyPicture.title }}" />
+      <p>{{ astronomyPicture.explanation }}</p>
     </div>
-
-    <!-- BÚSQUEDA -->
-    <div class="busqueda">
-        <input type="date" [(ngModel)]="selectedDate" (ngModelChange)="getAstronomyPicture()">
-    </div>
-
-    <!-- DATOS DEL APOB -->
-    <div *ngIf="astronomyPicture">
-
-        <!-- Texto del clima -->
-        <h2>{{ astronomyPicture.title }}</h2>
-
-        <!-- Descripción del clima -->
-        <img [src]="astronomyPicture.url" alt="{{ astronomyPicture.title }}" />
-        <p>{{ astronomyPicture.explanation }}</p>
-    </div>
+  }
 </div>

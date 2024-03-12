@@ -18,15 +18,17 @@
   </div>
 
   <!-- DATOS DEL USUARIO -->
-  <div *ngIf="userData">
-
-    <!-- Texto del usuario -->
-    <h3>Detalles del usuario:</h3>
-
-    <!-- Descripción del usuario -->
-    <p><strong>Login:</strong> {{ userData.login }}</p>
-    <p><strong>Nombre:</strong> {{ userData.name }}</p>
-  </div>
-  <button *ngIf="userData" (click)="copiarPortapapeles()" id="botonPortapapeles">Copiar al portapapeles</button>
+  @if (userData) {
+    <div>
+      <!-- Texto del usuario -->
+      <h3>Detalles del usuario:</h3>
+      <!-- Descripción del usuario -->
+      <p><strong>Login:</strong> {{ userData.login }}</p>
+      <p><strong>Nombre:</strong> {{ userData.name }}</p>
+    </div>
+  }
+  @if (userData) {
+    <button (click)="copiarPortapapeles()" id="botonPortapapeles">Copiar al portapapeles</button>
+  }
 </div>
 
