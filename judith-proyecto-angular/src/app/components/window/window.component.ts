@@ -37,12 +37,14 @@ export class WindowComponent {
     }
   }
 
+  // Método para cerrar la ventana
   closeWindow(): void {
     if (this.windowTest) {
       this.windowTest.close();
     }
   }
 
+  // Método para mover la ventana
   moveWindowTo(): void {
     if (this.windowTest) {
       this.windowTest.focus();
@@ -57,6 +59,7 @@ export class WindowComponent {
     }
   }
 
+  // Método para redimensionar la ventana
   resizeWindowTo(): void {
     if (this.windowTest) {
       this.windowTest.focus();
@@ -71,6 +74,7 @@ export class WindowComponent {
     }
   }
 
+  // Método para scrollear la ventana
   scrollWindowTo(): void {
     if (this.windowTest) {
       this.windowTest.focus();
@@ -85,6 +89,7 @@ export class WindowComponent {
     }
   }
 
+  // Otros métodos de la ventana
   blurWindow(): void {
     if (this.windowTest) {
       this.windowTest.blur();
