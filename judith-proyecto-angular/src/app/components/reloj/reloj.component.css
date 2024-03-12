@@ -1,17 +1,34 @@
-/* ESTILOS DEL RELOJ MUNDIAL */
-/* Estilo del contenedor del reloj mundial */
-.reloj-mundial {
-    padding: 20px;
+/* ESTILOS GENERALES */
+/* Estilo del contenedor principal */
+.contenedor {
     background-color: #f8f8f8;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-  }
-  
-  /* Estilo de la hora actual */
-  h2 {
-    color: #e57373;
-    font-size: 24px;
+    color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+/* ESTILOS DE LA CABECERA */
+/* Estilo del contenedor de cabecera */
+.cabecera {
+    background-color: #e57373;
+    padding: 10px;
     margin: 0;
-  }
-  
+}
+
+/* Estilo del texto de la cabecera */
+h1 {
+    color: white;
+}
+
+/* ESTILOS DEL RELOJ Y ZONAS HORARIAS */
+/* Estilo del contenedor de reloj y zonas horarias */
+.reloj,
+.zonasHorarias {
+    margin-top: 20px;
+}
+
+/* Estilo del párrafo que muestra la hora */
+p {
+    font-size: 18px;
+    margin: 10px 0;
+}

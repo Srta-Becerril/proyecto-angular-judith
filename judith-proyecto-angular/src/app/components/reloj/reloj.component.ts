@@ -33,5 +33,3 @@ export class RelojMundialComponent implements OnInit {
     return fecha.toLocaleTimeString();
   }
 }
-
-
