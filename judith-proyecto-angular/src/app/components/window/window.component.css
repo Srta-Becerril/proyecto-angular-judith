@@ -1,0 +1,25 @@
+/* Estilos generales */
+.contenedor {
+    background-color: #f8f8f8;
+    color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilos de botones */
+button {
+    background-color: #e57373;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid #e57373;
+    border-radius: 5px;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+/* Estilo del cursor al pasar el mouse por encima */
+button:hover {
+    background-color: rgb(0, 0, 0);
+    color: #e57373;
+}
