@@ -1,0 +1,10 @@
+<div class="file-management">
+    <input type="file" (change)="onFileSelected($event)" />
+    <button (click)="uploadFile()">Subir Archivo</button>
+
+    <div *ngIf="uploadedFile">
+        <h4>Archivo Subido:</h4>
+        <p>{{ uploadedFile?.name }}</p>
+        <p>Tamaño: {{ uploadedFile?.size }} bytes</p>
+    </div>
+</div>
