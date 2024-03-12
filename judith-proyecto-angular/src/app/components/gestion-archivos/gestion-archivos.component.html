@@ -1,10 +1,38 @@
-<div class="file-management">
-    <input type="file" (change)="onFileSelected($event)" />
-    <button (click)="uploadFile()">Subir Archivo</button>
+<!-- HTML DEL COMPONENTE -->
+<!-- Contenedor general -->
+<div class="contenedor">
+    <!-- CABECERA -->
+    <div class="cabecera">
+        <!-- Texto de la cabecera -->
+        <h1>COMPONENTE - GESTOR DE ARCHIVOS</h1>
+    </div>
 
+    <!-- CARGADA DE ARCHIVOS -->
+    <div class="subida">
+        <!-- Entrada de texto para la subida de archivos -->
+        <input type="file" (change)="onFileSelected($event)" />
+        <!-- Botón de subida de archivos -->
+        <button (click)="uploadFile()" id="botonSubida">Subir Archivo</button>
+    </div>
+
+    <!-- SUBIDA DE ARCHIVOS -->
     <div *ngIf="uploadedFile">
+
+        <!-- Descripción del archivo subido -->
         <h4>Archivo Subido:</h4>
-        <p>{{ uploadedFile?.name }}</p>
-        <p>Tamaño: {{ uploadedFile?.size }} bytes</p>
+        <p>{{ uploadedFile.name }}</p>
+        <p>Tamaño: {{ uploadedFile.size }} bytes</p>
+    </div>
+
+    <!-- LISTA DE ARCHIVOS SUBIDOS -->
+    <div *ngIf="uploadedFiles.length > 0">
+
+        <!-- Listado de los archivos subidos -->
+        <h4>Archivos Subidos:</h4>
+        <ul>
+            <li *ngFor="let file of uploadedFiles">
+                {{ file.name }} (Tamaño: {{ file.size }} bytes)
+            </li>
+        </ul>
     </div>
 </div>

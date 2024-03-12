@@ -8,6 +8,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class GestionArchivosComponent {
   uploadedFile: File | null = null;
+  uploadedFiles: File[] = [];
+  microservicioURL = 'http://localhost:4200/upload';
 
   constructor(private httpClient: HttpClient) {}
 
@@ -20,9 +22,17 @@ export class GestionArchivosComponent {
       const formData = new FormData();
       formData.append('file', this.uploadedFile);
 
-      this.httpClient.post<any>('URL_DEL_MICROSERVICIO', formData).subscribe(
+      this.httpClient.post<any>(this.microservicioURL, formData).subscribe(
         response => {
           console.log('Archivo subido exitosamente:', response);
+
+          // Agregar el archivo a la lista de archivos subidos
+          if (this.uploadedFile !== null) {
+            formData.append('file', this.uploadedFile);
+          }
+          
+          // Limpiar la variable después de la subida
+          this.uploadedFile = null;
         },
         error => {
           console.error('Error al subir el archivo:', error);
@@ -31,5 +41,7 @@ export class GestionArchivosComponent {
     }
   }
 }
+
+
 
 

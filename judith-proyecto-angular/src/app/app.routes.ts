@@ -6,6 +6,7 @@ import { githubComponent } from './pages/github/github.component'; // Importar c
 import { NasaComponent } from './pages/nasa/nasa.component'; // Importar componente NASA
 import { NgModule } from '@angular/core'; // Importar NgModule
 import { FormsModule } from '@angular/forms'; // Importar FormsModule
+import { GestionArchivosComponent } from './components/gestion-archivos/gestion-archivos.component';
 
 // RUTAS
 export const routes: Routes = [
@@ -13,6 +14,7 @@ export const routes: Routes = [
     { path: 'clima', component: ClimaComponent, title: 'Clima' }, // Ruta clima
     { path: 'github', component: githubComponent, title: 'GitHub' }, // Ruta GitHub
     { path: 'apod', component: NasaComponent, title: 'APOD' }, // Ruta NASA
+    { path: 'gestion-archivos', component: GestionArchivosComponent, title: 'Gestion de archivos' },
     { path: '**', redirectTo: '', pathMatch: 'full' } // Ruta por defecto
 ];
 
@@ -21,7 +23,7 @@ import { CommonModule } from '@angular/common';
 
 // COMPONENTE NgModule
 @NgModule({
-  declarations: [NasaComponent], // Componentes declarados
+  declarations: [NasaComponent, GestionArchivosComponent], // Componentes declarados
   imports: [CommonModule, FormsModule], // Módulos importados
 })
 export class OtroModulo { } // Exportar componente
