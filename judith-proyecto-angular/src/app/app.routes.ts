@@ -7,6 +7,7 @@ import { NasaComponent } from './pages/nasa/nasa.component'; // Importar compone
 import { NgModule } from '@angular/core'; // Importar NgModule
 import { FormsModule } from '@angular/forms'; // Importar FormsModule
 import { GestionArchivosComponent } from './components/gestion-archivos/gestion-archivos.component';
+import { CameraComponent } from './components/camera/camera.component';
 
 // RUTAS
 export const routes: Routes = [
@@ -15,6 +16,7 @@ export const routes: Routes = [
     { path: 'github', component: githubComponent, title: 'GitHub' }, // Ruta GitHub
     { path: 'apod', component: NasaComponent, title: 'APOD' }, // Ruta NASA
     { path: 'gestion-archivos', component: GestionArchivosComponent, title: 'Gestion de archivos' },
+    { path: 'camera', component: CameraComponent, title: 'Camera' },
     { path: '**', redirectTo: '', pathMatch: 'full' } // Ruta por defecto
 ];
 

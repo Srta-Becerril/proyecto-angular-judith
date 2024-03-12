@@ -1,40 +1,45 @@
-import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+// MÓDULOS IMPORTADOS
+import { Component } from '@angular/core'; // Importar componente
+import { HttpClient } from '@angular/common/http'; // Importar HttpClient
 
+// COMPONENTE
 @Component({
-  selector: 'app-gestion-archivos',
-  templateUrl: './gestion-archivos.component.html',
-  styleUrls: ['./gestion-archivos.component.css']
+  selector: 'app-gestion-archivos', // Selector del componente
+  templateUrl: './gestion-archivos.component.html', // // Archivo HTML
+  styleUrls: ['./gestion-archivos.component.css'] // Archivo CSS
 })
+
+// CLASE
 export class GestionArchivosComponent {
-  uploadedFile: File | null = null;
-  uploadedFiles: File[] = [];
-  microservicioURL = 'http://localhost:3000/upload';
+  uploadedFile: File | null = null; // Variable para almacenar el archivo subido
+  uploadedFiles: File[] = []; // Variable para almacenar la lista de archivos subidos
+  microservicioURL = 'http://localhost:3000/upload'; // URL del microservicio
 
-  constructor(private httpClient: HttpClient) {}
+  constructor(private httpClient: HttpClient) {} // Constructor
 
-  onFileSelected(event: any): void {
-    this.uploadedFile = event.target.files[0];
+  // MÉTODOS
+  onFileSelected(event: any): void { // Método para manejar la selección de un archivo
+    this.uploadedFile = event.target.files[0]; // Asignar el archivo seleccionado
   }
 
-  uploadFile(): void {
-    if (this.uploadedFile) {
-      const formData = new FormData();
-      formData.append('file', this.uploadedFile);
+  uploadFile(): void { // Método para subir un archivo
+    if (this.uploadedFile) { // Verificar que se haya seleccionado un archivo
+      const formData = new FormData(); // Crear un objeto FormData
+      formData.append('file', this.uploadedFile); // Agregar el archivo
 
-      this.httpClient.post<any>(this.microservicioURL, formData).subscribe(
-        response => {
-          console.log('Archivo subido exitosamente:', response);
+      this.httpClient.post<any>(this.microservicioURL, formData).subscribe( // Enviar el archivo al microservicio
+        response => { // Respuesta del microservicio
+          console.log('Archivo subido exitosamente:', response); // Imprimir la respuesta
 
           // Agregar el archivo a la lista de archivos subidos
-          if (this.uploadedFile !== null) {
-            formData.append('file', this.uploadedFile);
+          if (this.uploadedFile !== null) { // Verificar que se haya seleccionado un archivo
+            formData.append('file', this.uploadedFile); // Agregar el archivo
           }
           
           // Limpiar la variable después de la subida
           this.uploadedFile = null;
         },
-        error => {
+        error => { // Error del microservicio
           console.error('Error al subir el archivo:', error);
         }
       );

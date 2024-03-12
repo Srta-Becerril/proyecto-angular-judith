@@ -1,6 +1,22 @@
-<button (click)="openCamera()">Open Camera</button>
-<button (click)="closeCamera()">Close Camera</button>
+<div class="contenedor">
+    <!-- CABECERA -->
+    <div class="cabecera">
+        <!-- Texto de la cabecera -->
+        <h1>COMPONENTE - CÁMARA</h1>
+    </div>
 
-<div id="cameraContainer" [style.display]="cameraVisible ? 'block' : 'none'">
-    <video #cameraFeed autoplay playsinline></video>
+    <!-- USOS DE CÁMARA -->
+    <div class="camara">
+        <!-- Botón de apertura de la cámara -->
+        <button (click)="openCamera()">Open Camera</button>
+        <!-- Botón de cierre de la cámara -->
+        <button (click)="closeCamera()">Close Camera</button>
+    </div>
+        
+    <!-- CARGADA DE CÁMARA -->
+    <!-- Caja de la cámara -->
+    <div id="cameraContainer" [style.display]="cameraVisible ? 'block' : 'none'">
+        <!-- Video de la cámara -->
+        <video #cameraFeed autoplay playsinline></video>
+    </div>
 </div>

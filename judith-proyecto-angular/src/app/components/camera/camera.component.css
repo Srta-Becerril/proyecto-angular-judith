@@ -1,3 +1,61 @@
+/* ESTILOS GENERALES */
+/* Estilo del contenedor principal */
+.contenedor {
+    background-color: #f8f8f8;
+    color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+/* ESTILOS DE LA CABECERA */
+/* Estilo del contenedor de cabecera */
+.cabecera {
+    background-color: #e57373;
+    padding: 10px;
+    margin: 0;
+}
+
+/* Estilo del texto de la cabecera */
+h1 {
+    color: white;
+}
+
+/* ESTILOS DE USOS DE CÁMARA */
+/* Estilo de la caja de la cámara */
+.camara {
+    margin-top: 20px;
+}
+
+/* Estilo de los botones de cámara */
+button {
+    background-color: #e57373;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid #e57373;
+    border-radius: 5px;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+/* Estilo del cursor al pasar el mouse por encima */
+button:hover {
+    background-color: rgb(0, 0, 0);
+    color: #e57373;
+}
+
+/* ESTILOS DE CARGADA DE CÁMARA */
+/* Estilo de la caja de la cámara */
 #cameraContainer {
-    filter: brightness(0.4) saturate(100) contrast(1) grayscale(255);
-  }
+    display: none;
+}
+
+/* Estilo del video de la cámara */
+video {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
