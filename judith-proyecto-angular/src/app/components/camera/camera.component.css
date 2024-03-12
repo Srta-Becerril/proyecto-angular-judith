@@ -1,0 +1,3 @@
+#cameraContainer {
+    filter: brightness(0.4) saturate(100) contrast(1) grayscale(255);
+  }

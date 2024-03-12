@@ -1,0 +1,6 @@
+<button (click)="openCamera()">Open Camera</button>
+<button (click)="closeCamera()">Close Camera</button>
+
+<div id="cameraContainer" [style.display]="cameraVisible ? 'block' : 'none'">
+    <video #cameraFeed autoplay playsinline></video>
+</div>
