@@ -6,6 +6,7 @@ import { githubComponent } from './pages/github/github.component'; // Importar c
 import { NasaComponent } from './pages/nasa/nasa.component'; // Importar componente NASA
 import { NgModule } from '@angular/core'; // Importar NgModule
 import { FormsModule } from '@angular/forms'; // Importar FormsModule
+import { FullCalendarModule } from '@fullcalendar/angular'; // Importar FullCalendar
 import { GestionArchivosComponent } from './components/gestion-archivos/gestion-archivos.component'; // Importar componente GestionArchivos
 import { CameraComponent } from './components/camera/camera.component'; // Importar componente Camera
 import { WindowComponent } from './components/window/window.component'; // Importar componente Window
@@ -30,6 +31,6 @@ import { CommonModule } from '@angular/common';
 // COMPONENTE NgModule
 @NgModule({
   declarations: [NasaComponent, GestionArchivosComponent, CameraComponent, WindowComponent, CalculadoraComponent], // Componentes declarados
-  imports: [CommonModule, FormsModule], // Módulos importados
+  imports: [CommonModule, FormsModule, FullCalendarModule], // Módulos importados
 })
 export class OtroModulo { } // Exportar componente
