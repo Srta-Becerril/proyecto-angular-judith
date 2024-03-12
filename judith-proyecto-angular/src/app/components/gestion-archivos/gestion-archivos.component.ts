@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 export class GestionArchivosComponent {
   uploadedFile: File | null = null;
   uploadedFiles: File[] = [];
-  microservicioURL = 'http://localhost:4200/upload';
+  microservicioURL = 'http://localhost:3000/upload';
 
   constructor(private httpClient: HttpClient) {}
 
