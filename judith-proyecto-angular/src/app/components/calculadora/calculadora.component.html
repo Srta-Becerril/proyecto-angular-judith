@@ -1,3 +1,4 @@
+<!-- HTML DEL COMPONENTE -->
 <!-- Contenedor general -->
 <div class="contenedor">
 
@@ -12,30 +13,26 @@
         <!-- Pantalla -->
         <input type="text" class="form-control" [(ngModel)]="display" disabled>
 
-        <!-- Botones numéricos -->
+        <!-- Botones numéricos y de operaciones -->
         <div class="botones">
             <button (click)="addToDisplay('7')">7</button>
             <button (click)="addToDisplay('8')">8</button>
             <button (click)="addToDisplay('9')">9</button>
+            <button (click)="addToDisplay('*')">*</button>
             <button (click)="addToDisplay('4')">4</button>
             <button (click)="addToDisplay('5')">5</button>
             <button (click)="addToDisplay('6')">6</button>
+            <button (click)="addToDisplay('-')">-</button>
             <button (click)="addToDisplay('1')">1</button>
             <button (click)="addToDisplay('2')">2</button>
             <button (click)="addToDisplay('3')">3</button>
-            <button (click)="addToDisplay('0')">0</button>
-            <button (click)="addToDisplay('.')">.</button>
-        </div>
-
-        <!-- Botones de operaciones -->
-        <div class="botones">
-            <button (click)="clearDisplay()">C</button>
-            <button (click)="deleteLast()">DEL</button>
-            <button (click)="addToDisplay('/')">/</button>
-            <button (click)="addToDisplay('*')">*</button>
-            <button (click)="addToDisplay('-')">-</button>
             <button (click)="addToDisplay('+')">+</button>
+            <button (click)="clearDisplay()">C</button>
+            <button (click)="addToDisplay('0')">0</button>
             <button (click)="calculateResult()">=</button>
+            <button (click)="addToDisplay('/')">/</button>
+            <button (click)="addToDisplay('.')">.</button>
+            <button (click)="deleteLast()">DEL</button>
         </div>
     </div>
 </div>
