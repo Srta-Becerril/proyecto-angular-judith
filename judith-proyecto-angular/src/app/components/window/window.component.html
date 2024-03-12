@@ -1,22 +1,38 @@
+<!-- HTML DEL COMPONENTE -->
+<!-- Contenedor general -->
 <div class="contenedor">
-    <h1>Componente - Ventana</h1>
 
-    <button (click)="openNewWindow()">Open</button>
-    <button (click)="closeWindow()">Close</button>
+    <!-- CABECERA -->
+    <div class="cabecera">
+        <!-- Texto de la cabecera -->
+        <h1>COMPONENTE - WINDOW</h1>
+    </div>
 
-    <button (click)="moveWindowTo()">Move To</button>
-    <button (click)="moveWindowBy()">Move By</button>
+    <!-- USOS DE WINDOW -->
+    <div class="usosWindow">
+        <!-- Botón de apertura de la ventana -->
+        <button (click)="openNewWindow()">Open</button>
+        <!-- Botón de cierre de la ventana -->
+        <button (click)="closeWindow()">Close</button>
 
-    <button (click)="resizeWindowTo()">Resize To</button>
-    <button (click)="resizeWindowBy()">Resize By</button>
+        <!-- Botones de mover la ventana -->
+        <button (click)="moveWindowTo()">Move To</button>
+        <button (click)="moveWindowBy()">Move By</button>
 
-    <button (click)="scrollWindowTo()">Scroll To</button>
-    <button (click)="scrollWindowBy()">Scroll By</button>
+        <!-- Botones de redimensionar la ventana -->
+        <button (click)="resizeWindowTo()">Resize To</button>
+        <button (click)="resizeWindowBy()">Resize By</button>
 
-    <button (click)="blurWindow()">Blur</button>
-    <button (click)="stopWindow()">Stop</button>
-    <button (click)="alertWindow()">Alert</button>
-    <button (click)="printWindow()">Print</button>
-    <button (click)="promptWindow()">Prompt</button>
-    <button (click)="confirmWindow()">Confirm</button>
+        <!-- Botones de scrollear la ventana -->
+        <button (click)="scrollWindowTo()">Scroll To</button>
+        <button (click)="scrollWindowBy()">Scroll By</button>
+        
+        <!-- Botones de otros usos de la ventana -->
+        <button (click)="blurWindow()">Blur</button>
+        <button (click)="stopWindow()">Stop</button>
+        <button (click)="alertWindow()">Alert</button>
+        <button (click)="printWindow()">Print</button>
+        <button (click)="promptWindow()">Prompt</button>
+        <button (click)="confirmWindow()">Confirm</button>
+    </div>
 </div>

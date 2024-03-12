@@ -8,6 +8,7 @@ import { NgModule } from '@angular/core'; // Importar NgModule
 import { FormsModule } from '@angular/forms'; // Importar FormsModule
 import { GestionArchivosComponent } from './components/gestion-archivos/gestion-archivos.component';
 import { CameraComponent } from './components/camera/camera.component';
+import { WindowComponent } from './components/window/window.component';
 
 // RUTAS
 export const routes: Routes = [
@@ -17,6 +18,7 @@ export const routes: Routes = [
     { path: 'apod', component: NasaComponent, title: 'APOD' }, // Ruta NASA
     { path: 'gestion-archivos', component: GestionArchivosComponent, title: 'Gestion de archivos' },
     { path: 'camera', component: CameraComponent, title: 'Camera' },
+    { path: 'window', component: WindowComponent, title: 'Window' },
     { path: '**', redirectTo: '', pathMatch: 'full' } // Ruta por defecto
 ];
 
