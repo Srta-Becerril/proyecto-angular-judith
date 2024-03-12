@@ -8,34 +8,14 @@
   /* Establece un valor alto para asegurarte de que esté por encima */
 }
 
-/* Estilos del navbar */
-.navbar {
-  background-color: #f8f8f8;
-}
-
-.navbar-brand {
-  color: black;
-}
-
-.nav-link {
-  color: black;
-}
-
-.nav-link:hover {
-  color: #e57373;
-}
-
-.navbar-toggler-icon {
-  background-color: #e57373;
-}
-
-/* Dropdown */
+/* Estilos del dropdown */
 .dropdown-menu {
-  background-color: #f8f8f8;
+  background-color: #343a40; 
+  transition: 0.3s;
 }
 
 .dropdown-item {
-  color: black;
+  color: white;
   transition: 0.3s;
 }
 
@@ -44,11 +24,24 @@
   color: white;
 }
 
+.nav-link:hover {
+  color: #e57373;
+}
+
 /* Formulario de búsqueda */
 .form-control {
-  background-color: #e57373;
-  color: white;
+  background-color: white;
+  color: black;
   border: 1px solid #e57373;
+  transition: 0.3s;
+}
+
+.form-control:hover {
+  background-color: #e57373;
+}
+
+.form-control::placeholder {
+  color: rgb(179, 179, 179);
 }
 
 .btn-outline-success {
@@ -59,4 +52,16 @@
 .btn-outline-success:hover {
   background-color: #e57373;
   color: white;
+}
+
+/* Estilos para el navbar */
+.navbar-nav .nav-link,
+.navbar-toggler-icon {
+    color: white;
+    transition: 0.3s;
+}
+
+/* Estilos para el navbar cuando se hace hover */
+.navbar-nav .nav-link:hover {
+  color: #e57373; 
 }
